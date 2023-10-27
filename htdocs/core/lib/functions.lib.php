@@ -5999,8 +5999,8 @@ function price2num($amount, $rounding = '', $option = 0)
 	global $langs, $conf;
 
 	// Clean parameters
-	if (is_null($amount)) {
-		$amount = '';
+	if (empty($amount)) {
+		$amount = 0;
 	}
 
 	// Round PHP function does not allow number like '1,234.56' nor '1.234,56' nor '1 234,56'
